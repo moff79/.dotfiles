@@ -176,30 +176,30 @@ end
 
 ### ALIASES ###
 # spark aliases
-alias clear='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
+#alias clear='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 
 # root privileges
-alias doas="doas --"
+#alias doas="doas --"
 
 # navigation
-alias ..='cd ..' 
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
+#alias ..='cd ..' 
+#alias ...='cd ../..'
+#alias .3='cd ../../..'
+#alias .4='cd ../../../..'
+#alias .5='cd ../../../../..'
 
 # vim and emacs
-alias vim='nvim'
-alias em='/usr/bin/emacs -nw'
-alias emacs="emacsclient -c -a 'emacs'"
-alias doomsync="~/.emacs.d/bin/doom sync"
-alias doomdoctor="~/.emacs.d/bin/doom doctor"
-alias doomupgrade="~/.emacs.d/bin/doom upgrade"
-alias doompurge="~/.emacs.d/bin/doom purge"
+#alias vim='nvim'
+#alias em='/usr/bin/emacs -nw'
+#alias emacs="emacsclient -c -a 'emacs'"
+#alias doomsync="~/.emacs.d/bin/doom sync"
+#alias doomdoctor="~/.emacs.d/bin/doom doctor"
+#alias doomupgrade="~/.emacs.d/bin/doom upgrade"
+#alias doompurge="~/.emacs.d/bin/doom purge"
 
 # broot
-alias br='broot -dhp'
-alias bs='broot --sizes'
+#alias br='broot -dhp'
+#alias bs='broot --sizes'
 
 # Changing "ls" to "exa"
 #alias ls='exa -al --color=always --group-directories-first' # my preferred listing
