@@ -1,41 +1,3 @@
-killall -q polybar
-killall -q polybar
-echo "PATH=$PATH:~/.config/rofi/bin" >> ~/.profile
-killall -q polybar
-nano $HOME/.config/rofi/powermenu/powermenu.sh
-nano $HOME/.config/rofi/powermenu/powermenu.sh
-nano $HOME/.config/rofi/launchers/colorful/launcher.sh
-killall -q polybar
-nano $HOME/.config/rofi/launchers/colorful/launcher.sh
-nano $HOME/.config/rofi/launchers/misc
-killall -q polybar
-killall -q polybar
-killall -q polybar
-killall -q polybar
-killall -q polybar
-killall -q polybar
-killall -q polybar
-killall -q polybar
-killall -q polybar
-killall -q polybar
-killall -q polybar
-sudo pacman -S pacman-contrib
-nano .config/polybar/package-updates
-sudo /etc/pacman.d/hooks/polybar.hook
-sudo nano /etc/pacman.d/hooks/polybar.hook
-killall -q polybar
-sudo rm -r /etc/pacman.d/hooks/polybar.hook
-sudo rm -r .config/polybar/package-updates
-killall -q polybar
-cd pro/
-git clone https://aur.archlinux.org/yay
-git clone https://aur.archlinux.org/yay.git
-cd yay/
-ls
-makepkg -si
-yay
-echo "# .dotfiles" >> README.md
-git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
@@ -498,3 +460,41 @@ sudo pacman -Rsn nemo
 sudo pacman -S nemo
 nautilus
 sudo pacman -S nautilus
+cd .dotfiles/
+stow bspwm
+stow *
+stow bspwm/
+stow bspwm
+stow bspwm
+stow -D bspwm
+cd bspwm/
+stow *
+stow -D
+stow -D bspwm
+cd
+cd .dotfiles/
+stow bspwm
+ls
+git init
+git add .
+git commit -m "new bspwm"
+git puch git@github.com:moff79/.dotfiles.git
+git push git@github.com:moff79/.dotfiles.git
+git push --set-upstream git@github.com:moff79/.dotfiles.git master
+git status
+git add .
+git commit -m "new bspwm"
+git push git@github.com:moff79/.dotfiles.git
+git push git@github.com:moff79/.dotfiles.git
+git push git@github.com:moff79/.dotfiles.git
+git status
+git add .
+git commit -m "new fresh"
+git push git@github.com:moff79/.dotfiles.git
+killall -q polybar
+killall -q polybar
+killall -q polybar
+killall -q polybar
+killall -q polybar
+killall -q polybar
+killall -q polybar

@@ -87,7 +87,7 @@ cursor-scroll = ns-resize
 type = custom/text
 content = 
 content-background = ${color.bg}
-content-foreground = ${color.cyan}
+content-foreground = #ffb52a
 click-left = ~/.config/rofi/applets/menu/powermenu.sh &
 
 
@@ -96,7 +96,7 @@ click-left = ~/.config/rofi/applets/menu/powermenu.sh &
 type = custom/text
 content = 
 content-background = ${color.bg}
-content-foreground = ${color.cyan}
+content-foreground = #ffb52a
 click-left = ~/.config/rofi/launchers/colorful/launcher.sh &
 
 [module/updates-pacman-aurhelper]
@@ -104,6 +104,7 @@ type = custom/script
 exec = ~/.config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
 interval = 1000
 format-prefix = " "
+format-prefix-foreground = #ffb52a
 
 #[module/pacman-updates]
 #type = custom/script
