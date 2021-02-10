@@ -1,20 +1,3 @@
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/moff79/.dotfiles.git
-git push -u origin main
-echo "# .dotfiles" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git config --global user.email "mofnet@hotmail.com"
-git config --global user.name "Mohamed Fathy"
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/moff79/.dotfiles.git
-git push -u origin main
-killall -q polybar
-killall -q polybar
 killall -q polybar
 killall -q polybar
 killall -q polybar
@@ -498,3 +481,20 @@ killall -q polybar
 killall -q polybar
 killall -q polybar
 killall -q polybar
+cd .dotfiles/
+git ststus
+git status
+git add .
+git commit -m "fresh bspwm"
+git push git@github.com:moff79/.dotfiles.git
+git pull
+git push git@github.com:moff79/.dotfiles.git
+git status
+git commit -m "new"
+git push
+git status
+sudo pacman -Syu
+sudo pacman -S fish
+sudo pacman -S
+sudo pacman -Syu
+fish
