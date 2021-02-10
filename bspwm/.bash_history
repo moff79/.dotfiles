@@ -1,6 +1,5 @@
 killall -q polybar
 killall -q polybar
-killall -q polybar
 echo "PATH=$PATH:~/.config/rofi/bin" >> ~/.profile
 killall -q polybar
 nano $HOME/.config/rofi/powermenu/powermenu.sh
@@ -498,3 +497,4 @@ sudo pacman -Syu
 sudo pacman -Rsn nemo
 sudo pacman -S nemo
 nautilus
+sudo pacman -S nautilus

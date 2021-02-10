@@ -24,7 +24,7 @@ bspc rule -a Screenkey manage=off
 bspc config focus_follows_pointer true
 bspc rule -a * floating=on
 
-#mof
+#mof net
 nitrogen --restore &
 polybar top &
 picom --experimental-backends &
