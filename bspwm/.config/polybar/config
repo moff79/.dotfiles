@@ -103,7 +103,7 @@ click-left = ~/.config/rofi/launchers/colorful/launcher.sh &
 type = custom/script
 exec = ~/.config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
 interval = 1000
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = #ffb52a
 
 #[module/pacman-updates]
