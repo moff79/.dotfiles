@@ -1,9 +1,3 @@
-killall -q polybar
-killall -q polybar
-killall -q polybar
-sudo pacman -Syu
-killall -q polybar
-killall -q polybar
 nano .config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
 nano .config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
 killall -q polybar
@@ -498,3 +492,9 @@ sudo pacman -S fish
 sudo pacman -S
 sudo pacman -Syu
 fish
+sudo pacman -R $(pacman -Qtdq)
+sudo pacman -R $(pacman -Qtdq)
+rm -rf ~/.cache/*
+killall -q polybar
+locate vimrc
+vim

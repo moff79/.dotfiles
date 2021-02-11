@@ -14,4 +14,6 @@ POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
 export PATH=$HOME/.config/rofi/bin:$PATH
+export VIMINIT='source $MYVIMRC'
+export MYVIMRC='~/.config/.vim/.vimrc' 
 #mof

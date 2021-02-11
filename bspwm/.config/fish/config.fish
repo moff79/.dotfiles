@@ -6,6 +6,11 @@
 #
 # My fish config. Not much to see here; just some pretty standard stuff.
 
+
+export VIMINIT='source $MYVIMRC'
+export MYVIMRC='~/.config/.vim/.vimrc' 
+
+
 ### EXPORT ###
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set fish_greeting                      # Supresses fish's intro message
