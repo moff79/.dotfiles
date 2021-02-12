@@ -9,6 +9,8 @@
 
 export VIMINIT='source $MYVIMRC'
 export MYVIMRC='~/.config/.vim/.vimrc' 
+set PATH /var/lib/snapd/snap/bin $PATH
+set XDG_DATA_DIRS /var/lib/snapd/desktop/:$XDG_DATA_DIRS
 
 
 ### EXPORT ###

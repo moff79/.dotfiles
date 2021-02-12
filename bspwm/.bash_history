@@ -1,31 +1,3 @@
-nano .config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
-nano .config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
-killall -q polybar
-killall -q polybar
-chmod +x .config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
-killall -q polybar
-killall -q polybar
-nano .config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
-killall -q polybar
-nano .config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
-killall -q polybar
-killall -q polybar
-ls
-git add .config
-ls
-git remote add origin https://github.com/moff79/.dotfiles
-git remote -v
-git add sxhkd/
-git add sxhkd
-sudo pacman -S arc-gtk-theme
-su
-sudo pacman -S arc
-sudo pacman -S arc-icon-theme-git
-paru arc-icon-theme-git
-git clone https://github.com/addy-dclxvi/gtk-theme-collections ~/.themes
-paru arc-icon-theme-git
-ssh-keygen -t rsa -b 2048 -C "mofnet@hotmail.com"
-ssh-keygen -t rsa -b 2048 -C "mofnet@hotmail.com"
 git clone git@gitlab.com:mofnet/dotfiles.git
 ssh-keygen -t rsa -b 2048 -C "mofnet@hotmail.com"
 git clone git@gitlab.com:mofnet/dotfiles.git
@@ -498,3 +470,31 @@ rm -rf ~/.cache/*
 killall -q polybar
 locate vimrc
 vim
+  $ flutter sdk-path
+flutter sdk-path
+flutter
+hello-world
+flutter
+export PATH="$PATH:`pwd`/flutter/bin"
+flutter
+sudo snap install flutter --classic
+flutter
+flutter sdk-path
+which flutter
+find flutter
+find / flutter
+flutter sdk-path
+flutter
+sudo snap install flutter --classic
+sudo snap remove flutter --classic
+sudo snap remove flutter
+sudo snap install flutter --classic
+flutter
+flutter sdk-path
+sudo snap install flutter --classic
+sudo snap remove flutter
+sudo snap install flutter --classic
+snap version
+/etc/os-release
+flutter sdk-path
+flutter sdk-path
