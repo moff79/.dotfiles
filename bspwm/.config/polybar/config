@@ -18,11 +18,12 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #4D222222
+#background = #4D222222
+background = #353535
 background-alt = #bf444
 ;foreground = ${xrdb:color7:#222}
-foreground = #ffffff
-foreground-alt = #ffffff
+foreground = #D4D4D4
+foreground-alt = #D4D4D4
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -42,8 +43,8 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-border-size = 0
-border-color = #00000000
+border-bottom-size = 1
+border-color = #666
 
 padding-left = 3
 padding-right = 3
@@ -61,7 +62,9 @@ font-5 = Font Awesome 5 Brands:pixelsize=9;2
 modules-left = launcher bspwm
 modules-center = xwindow
 modules-right = networkspeedup networkspeeddown updates-pacman-aurhelper filesystem xbacklight xkeyboard memory cpu temperature pavolume date logout
-separator =|
+
+separator = |
+#separator-padding = 2
 
 tray-position = center
 tray-padding = 2
@@ -96,7 +99,9 @@ scroll-up = ~/.config/polybar/polybar-scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/polybar-scripts/pavolume.sh --down
 format-underline = #3EC13F
 format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+
+
+
 
 
 
@@ -144,6 +149,7 @@ blacklist-0 = num lock
 format-prefix = "  "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
+
 
 label-layout = %layout%
 label-layout-underline = ${colors.secondary}
@@ -372,10 +378,13 @@ format-disconnected =
 type = internal/date
 format-prefix = ""
 label = %{F#99}%date%%{F-}  %{F#fff}%time%%{F-}
+format-background = #1A1A1A
+label-padding = 2
 date = %d/%m/%Y
 date-alt = %A, %B %d, %Y
 time = %I:%M %p
 time-alt = ${self.time}
+
 
 
 
