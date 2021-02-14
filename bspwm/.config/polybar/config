@@ -39,7 +39,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 0
 line-color = #f00
 
 border-size = 0
@@ -51,7 +51,7 @@ padding-right = 3
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = fixed:pixelsize=9;1
+font-0 = fixed:pixelsize=9;1:fontformat=truetype:antialias=true
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Weather Icons:size=12;1
 font-3 = Font Awesome 5 Free:pixelsize=9;2
@@ -60,8 +60,8 @@ font-5 = Font Awesome 5 Brands:pixelsize=9;2
 
 modules-left = launcher bspwm
 modules-center = xwindow
-modules-right = updates-pacman-aurhelper filesystem xbacklight  pulseaudio xkeyboard memory cpu temperature date logout
-separator = | 
+modules-right = networkspeedup networkspeeddown updates-pacman-aurhelper filesystem xbacklight xkeyboard memory cpu temperature pavolume date logout
+separator =|
 
 tray-position = center
 tray-padding = 2
@@ -80,6 +80,24 @@ wm-restack = bspwm
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+
+
+
+
+[module/pavolume]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/polybar-scripts/pavolume.sh --listen
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/polybar-scripts/pavolume.sh --togmute
+scroll-up = ~/.config/polybar/polybar-scripts/pavolume.sh --up
+scroll-down = ~/.config/polybar/polybar-scripts/pavolume.sh --down
+format-underline = #3EC13F
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
 
 
 #rofi
@@ -278,6 +296,44 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
+
+################################################################################
+
+[module/networkspeedup]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+;interface = wlp3s0
+;interface = enp14s0
+interface = eno1
+;interface = enp4s0
+label-connected = "%upspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = ""
+format-connected-prefix-foreground = #FE522C
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background}
+;format-connected-underline = #62FF00
+
+################################################################################
+
+[module/networkspeeddown]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+;interface = wlp3s0
+;interface = enp14s0
+interface = eno1
+;interface = enp4s0
+label-connected = "%downspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = ""
+format-connected-prefix-foreground = #3EC13F
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background}
+;format-connected-underline = #62FF00
+
+################################################################################
+
+
 [module/eth]
 type = internal/network
 interface = eno1
@@ -314,8 +370,8 @@ format-disconnected =
 #from https://github.com/polybar/polybar/issues/571
 
 type = internal/date
-format-prefix = "   "
-label = %{F#99}%date%%{F-}   %{F#fff}%time%%{F-}
+format-prefix = ""
+label = %{F#99}%date%%{F-}  %{F#fff}%time%%{F-}
 date = %d/%m/%Y
 date-alt = %A, %B %d, %Y
 time = %I:%M %p
