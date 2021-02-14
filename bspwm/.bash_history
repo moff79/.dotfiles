@@ -1,4 +1,3 @@
-git clone git@gitlab.com:mofnet/dotfiles.git
 ssh-keygen -t rsa -b 2048 -C "mofnet@hotmail.com"
 git clone git@gitlab.com:mofnet/dotfiles.git
 ssh-keygen -t rsa -b 2048 -C "mofnet@hotmail.com"
@@ -498,3 +497,4 @@ snap version
 /etc/os-release
 flutter sdk-path
 flutter sdk-path
+ua-update-all

@@ -12,7 +12,6 @@ export MYVIMRC='~/.config/.vim/.vimrc'
 set PATH /var/lib/snapd/snap/bin $PATH
 set XDG_DATA_DIRS /var/lib/snapd/desktop/:$XDG_DATA_DIRS
 
-
 ### EXPORT ###
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set fish_greeting                      # Supresses fish's intro message
