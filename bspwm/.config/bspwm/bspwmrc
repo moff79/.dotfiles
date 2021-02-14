@@ -22,7 +22,13 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 bspc config focus_follows_pointer true
+
+# this is for floating
 bspc rule -a * floating=on
+
+# this is for xtreem download manager floating
+bspc rule -a xdman-Main state=floating
+#bspc rule -a jetbrains-studio state=fullscreen
 
 #mof net 2021
 nitrogen --restore &
