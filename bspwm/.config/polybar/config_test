@@ -1,0 +1,180 @@
+;==========================================================
+;
+;==========================================================
+
+; Include powerline utility
+include-file = ~/.config/polybar/powerline-for-polybar/powerline-for-polybar.config
+
+; Include color scheme
+include-file = ~/.config/polybar/powerline-for-polybar/samples/sample-colors.config
+
+;=======================================
+; Bar
+;=======================================
+
+[bar/top]
+; Generic options
+width              = 100%
+height             = 18
+fixed-center       = false
+border-left-size   = 0
+border-top-size    = 0
+border-right-size  = 0
+border-bottom-size = 1
+border-color       = ${colors.mof1}
+
+; Set bar's default background/foreground color
+background         = ${colors.mof1}
+foreground         = ${colors.mof2}
+
+; Set bar's fonts list
+font-0 = Inconsolata for Powerline:pixelsize=10:antialias=true;3
+font-1 = fixed:pixelsize=9;1:fontformat=truetype:antialias=true
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = Weather Icons:size=12;1
+font-4 = Font Awesome 5 Free:pixelsize=15;2
+font-5 = Font Awesome 5 Free Solid:pixelsize=30;6
+font-6 = Font Awesome 5 Brands:pixelsize=15;2
+font-7 = Iosevka Nerd Font:pixelsize=9:antialias=true;3
+font-8 = Iosevka Nerd Font:style=Medium:size=22;5
+
+
+; Set modules list
+modules-left = launcher bspwm
+modules-center     = xwindow
+modules-right      = networkspeedup networkspeeddown updates-pacman-aurhelper filesystem memory cpu pavolume date xkeyboard logout
+#separator =|
+#separator-padding = 1
+
+;=======================================
+; Modules
+;=======================================
+
+
+[module/cpu]
+
+; Other settings
+type              = internal/cpu
+label             = "CPU:%percentage%% "
+background        = ${colors.mof3}
+format-background = ${self.background}
+format-foreground = ${colors.mof2}
+
+[module/memory]
+; Other settings
+type              = internal/memory
+label             =  %{T8}RAM:%percentage_used%% %{T-}
+background        = ${colors.mof3}
+format-background = ${self.background}
+format-foreground = ${colors.mof2}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+label-mounted = %{T8} %free%%{T-}
+label-mounted-background = ${colors.mof3}
+label-mounted-padding = 1
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+; Powerline settings
+inherit           = powerline-templates/right-to-left-item
+background        = ${colors.mof3}
+background-next   = ${colors.mof1}
+format-background = ${self.background}
+format-foreground = ${colors.mof2}
+
+
+[module/networkspeedup]
+; Powerline settings
+inherit           = powerline-templates/right-to-left-item
+background        = ${colors.mof1}
+background-next   = ${colors.mof3}
+
+; Other settings
+type              = internal/network
+interface         = eno1
+format-connected-background = ${self.background}
+format-connected-foreground = ${colors.black}
+label-connected = %{T8}%{F#3EC13F}%{F-}%downspeed:7% %{F#FE522C}%{F-}%upspeed:7% %{T-} 
+
+
+#rofi
+[module/logout]
+type = custom/text
+content = %{T8}%{T-}
+content-padding = 1
+content-background = ${color.mof1}
+content-foreground = #ffb52a
+click-left = ~/.config/rofi/applets/menu/powermenu.sh &
+
+[module/date]
+; Powerline settings
+inherit           = powerline-templates/right-to-left-item
+background        = ${colors.mof1}
+background-next   = ${colors.mof3}
+type = internal/date
+format-prefix = ""
+label = %{F#99}%date%%{F-} %{F#fff}%time%%{F-}
+date = %d/%m/%Y
+date-alt = %A, %B %d, %Y
+time = %I:%M %p
+time-alt = ${self.time}
+
+[module/pavolume]
+type = custom/script
+tail = true
+label = %{T8}%output%%{T-}
+label-padding = 1
+exec = ~/.config/polybar/polybar-scripts/pavolume.sh --listen
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/polybar-scripts/pavolume.sh --togmute
+scroll-up = ~/.config/polybar/polybar-scripts/pavolume.sh --up
+scroll-down = ~/.config/polybar/polybar-scripts/pavolume.sh --down
+
+; Powerline settings
+inherit           = powerline-templates/right-to-left-item
+background        = ${colors.mof1}
+background-next   = ${colors.mof3}
+format-background = ${self.background}
+format-foreground = ${colors.mof2}
+
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+format-prefix = %{T8}  %{T-}
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+
+
+
+[module/bspwm]
+type = internal/bspwm
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+label-occupied = %index%
+label-occupied-padding = 2
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+
+
+[module/xwindow]
+; Other settings
+type              = internal/xwindow
+label             = "%title%"
