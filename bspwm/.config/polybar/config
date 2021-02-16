@@ -195,7 +195,8 @@ label = %{T13}%output%%{T-}
 format-prefix = "  "
 format-prefix-foreground =#E4AD0D
 format-prefix-background = ${colors.black}
-
+# this will reload polybar
+click-left = pkill -USR1 polybar
 
 [module/updates-pacman-aurhelper]
 type = custom/script
