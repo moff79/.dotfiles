@@ -46,7 +46,7 @@ font-13 = "Iosevka Nerd Font:pixelsize=12:antialias=true;3"
 ; Set modules list
 modules-center     = xwindow
 modules-right      = line-end networkspeedup filesystem memory cpu pavolume date logout
-modules-left = launcher bspwm browser thunar TelegramDesktop email galculator pacman-updates
+modules-left = launcher bspwm browser thunar TelegramDesktop deepin galculator pacman-updates
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -189,7 +189,8 @@ separator          = ${colors.black}
 [module/pacman-updates]
 ; Powerline settings
 type = custom/script
-exec = yay -Pn
+#exec = yay -Pn
+exec = checkupdates | wc -l
 interval = 1000
 label = %{T13}%output%%{T-}
 format-prefix = "  "
@@ -238,7 +239,9 @@ content = %{T12}%{T-}
 content-padding = 0
 click-left = brave https://www.live.com >/dev/null 2>&1 &
 
-
+;;;;;;;;;;;;;;;;;;;;;;
+;;     Galculator   ;;
+;;;;;;;;;;;;;;;;;;;;;;
 [module/galculator]
 type = custom/text
 #content-background = ${colors.red}
@@ -247,7 +250,24 @@ content = %{T12}%{T-}
 content-padding = 1
 click-left = galculator >/dev/null 2>&1 &
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; deepin-screen-recorder  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/deepin]
+type = custom/text
+#content-background = ${colors.red}
+content-foreground = ${colors.yellow}
+content = %{T12}%{T-}
+content-padding = 0
+click-left = deepin-screen-recorder >/dev/null 2>&1 &
 
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;
+;;     xwindow      ;;
+;;;;;;;;;;;;;;;;;;;;;;
 [module/xwindow]
 ; Other settings
 type               = internal/xwindow
@@ -263,7 +283,7 @@ enable-click = true
 enable-scroll = true
 reverse-scroll = true
 
-label-focused = %{T5}%name%%{T-}
+label-focused = %{T5}%{F#88C0D0}%name%%{F-}%{T-}
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1

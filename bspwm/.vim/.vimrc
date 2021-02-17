@@ -1,5 +1,6 @@
 
 
+colorscheme nord
 
 call plug#begin('~/.vim/plugged')
 
