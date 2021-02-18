@@ -131,8 +131,6 @@ time = %I:%M %p
 time-alt = ${self.time}
 
 
-
-
 [module/cpu]
 ; Powerline settings
 inherit            = powerline-templates/right-to-left-item-with-separator
@@ -191,8 +189,8 @@ separator          = ${colors.black}
 [module/pacman-updates]
 ; Powerline settings
 type = custom/script
-#exec = yay -Pn
-exec = checkupdates | wc -l
+exec = yay -Pn
+#exec = checkupdates | wc -l
 interval = 1000
 label = %{T13}%output%%{T-}
 format-prefix = "  "
