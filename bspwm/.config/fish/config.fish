@@ -6,7 +6,7 @@ set fish_greeting
 neofetch
 
 export VIMINIT='source $MYVIMRC'
-export MYVIMRC='~/.vim/.vimrc' 
+export MYVIMRC='~/.config/nvim/init.vim' 
 set PATH /var/lib/snapd/snap/bin $PATH
 set XDG_DATA_DIRS /var/lib/snapd/desktop/:$XDG_DATA_DIRS
 

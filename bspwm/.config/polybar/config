@@ -42,6 +42,8 @@ font-10 = "Font Awesome 5 Free:pixelsize=9;2"
 font-11 = "Iosevka Nerd Font:pixelsize=10:antialias=true;3"
 font-12 = "Inconsolata for Powerline:pixelsize=12:antialias=true;3"
 font-13 = "Iosevka Nerd Font:pixelsize=12:antialias=true;3"
+font-14 = "bravelogo2:style=Regular:pixelsize=13:antialias=true;4"
+font-15 = "bravelogo:style=Regular:pixelsize=12:antialias=true;3"
 
 ; Set modules list
 modules-center     = xwindow
@@ -211,7 +213,8 @@ format-prefix-foreground = #ffb52a
 type = custom/text
 #content-background = ${colors.red}
 content-foreground = ${colors.yellow}
-content = %{T12}%{T-}
+content = %{T15}%{T-}
+
 content-padding = 1
 click-left = brave >/dev/null 2>&1 &
 

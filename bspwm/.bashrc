@@ -15,7 +15,7 @@ POWERLINE_BASH_SELECT=1
 
 export PATH=$HOME/.config/rofi/bin:$PATH
 export VIMINIT='source $MYVIMRC'
-export MYVIMRC='~/.vim/.vimrc' 
+export MYVIMRC='~/.config/nvim/init.vim' 
 
 export PATH=$PATH:/snap/bin
 
