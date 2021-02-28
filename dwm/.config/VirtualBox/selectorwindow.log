@@ -1,0 +1,19 @@
+00:00:00.845083 VirtualBox GUI VM Selector Window 6.1.18 r142142 linux.amd64 (Feb 16 2021 07:45:49) release log
+00:00:00.845085 Log opened 2021-02-28T08:01:29.367126000Z
+00:00:00.845086 Build Type: release
+00:00:00.845088 OS Product: Linux
+00:00:00.845090 OS Release: 5.11.1-arch1-1
+00:00:00.845091 OS Version: #1 SMP PREEMPT Tue, 23 Feb 2021 14:05:30 +0000
+00:00:00.845107 DMI Product Name: OptiPlex 7020
+00:00:00.845113 DMI Product Version: 00
+00:00:00.845116 Firmware type: UEFI
+00:00:00.845273 Secure Boot: Disabled
+00:00:00.845301 Host RAM: 15914MB (15.5GB) total, 13570MB (13.2GB) available
+00:00:00.845303 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.845303 Process ID: 38212
+00:00:00.845304 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.845320 Qt version: 5.15.2
+00:00:00.865211 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:01.295031 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 755x18 x 603x742
+00:00:01.295180 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:53:36.418316 GUI: UIMediumEnumerator: Medium-enumeration finished!
