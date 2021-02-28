@@ -1,0 +1,3 @@
+#!/bin/bash
+weather=$(curl -s wttr.in/Asyut?format=%t)
+printf "$weather"
