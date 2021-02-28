@@ -9,6 +9,7 @@ set fish_greeting
 
 export VIMINIT='source $MYVIMRC'
 export MYVIMRC='~/.config/nvim/init.vim' 
+set PATH $HOME/.config/vifm/scripts $PATH
 set PATH /var/lib/snapd/snap/bin $PATH
 set XDG_DATA_DIRS /var/lib/snapd/desktop/:$XDG_DATA_DIRS
 
