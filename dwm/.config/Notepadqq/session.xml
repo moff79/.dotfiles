@@ -3,9 +3,9 @@
     <View>
         <Tab filePath="/run/media/mof/01D70A71FD5ECE30/Backup/Hard/Linux/some_linux.txt" cacheFilePath="" scrollX="0" scrollY="0" language="plaintext" lastModified="1613999568240"/>
         <Tab filePath="/run/media/mof/01D70A71FD5ECE30/Backup/Hard/Linux/mof.txt" cacheFilePath="" scrollX="0" scrollY="2824" language="plaintext" lastModified="1614443504349"/>
-        <Tab filePath="/home/mof/.bashrc" cacheFilePath="" scrollX="0" scrollY="0" language="plaintext" lastModified="1614514063989"/>
+        <Tab filePath="/home/mof/.bashrc" cacheFilePath="" scrollX="0" scrollY="0" language="plaintext" lastModified="1614523338205" active="1"/>
         <Tab filePath="/home/mof/.Xresources" cacheFilePath="" scrollX="0" scrollY="0" language="plaintext" lastModified="1614516501415"/>
-        <Tab filePath="/home/mof/.config/fish/config.fish" cacheFilePath="" scrollX="0" scrollY="660" language="plaintext" lastModified="1614520704355" active="1"/>
+        <Tab filePath="/home/mof/.config/fish/config.fish" cacheFilePath="" scrollX="0" scrollY="660" language="plaintext" lastModified="1614520704355"/>
         <Tab filePath="/home/mof/.config/fish/functions/fish_greeting.fish" cacheFilePath="" scrollX="0" scrollY="0" language="plaintext" lastModified="1614520475358"/>
     </View>
 </Notepadqq>
