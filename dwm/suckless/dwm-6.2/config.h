@@ -72,7 +72,9 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
  	{ "[@]",      spiral },
  	{ "[\\]",      dwindle },
-};
+	{ "|M|",      centeredmaster },
+	{ ">M>",      centeredfloatingmaster },
+	};
 
 /* key definitions */
 #define MODKEY Mod4Mask
@@ -136,7 +138,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F11, spawn, {.v = downvol } },
 	{ MODKEY,                       XK_F9,  spawn, {.v = mutevol } },
 	{ MODKEY,                       XK_F12, spawn, {.v = upvol   } },
-};
+	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[6]} },
+	};
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
