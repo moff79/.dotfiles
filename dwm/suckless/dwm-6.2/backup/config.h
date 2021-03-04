@@ -5,7 +5,7 @@
  */
 /* Somewhere at the beginning of config.h include: */
 
-/* 
+/*  MOF 
  You obviously need the X11 development package installed, but here is the upstream copy
  of this header if you can't bother using the contents of your own hard drive. ;-P
  https://cgit.freedesktop.org/xorg/proto/x11proto/tree/XF86keysym.h
@@ -18,23 +18,26 @@
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
-/* appearance */
+
+/* appearance mofofof */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Iosevka Nerd Font:pixelsize=12:antialias=true",
-	                                "UbuntuMono Nerd Font:size=12:antialias=true:autohint=true",
-	                                "Font Awesome 5 Free:size:10:antialias=true:autohint=true",
-				        "PowerlineSymbols:size=17:style=Medium",
-				        "monospace:size=12" };
+static const char *fonts[]          = { "terminus:size=9:antialias=true:autohint=true",
+					"UbuntuMono Nerd Font:size=9:antialias=true:autohint=true",
+	                                "Iosevka Nerd Font:pixelsize=11:antialias=true",
+	                                "Font Awesome 5 Free:size:11:antialias=true:autohint=true",
+					"monospace:size=12",
+					"PowerlineSymbols:size=17:style=Medium",
+};
 static const char dmenufont[]       = "Iosevka Nerd Font:pixelsize=12:antialias=true";
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_gray4[]       = "#000000";
+static const char col_cyan[]        = "#d5c4a1";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -51,6 +54,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "vlc",     NULL,       NULL,       0,            1,           -1 },
+	{ "TelegramDesktop", NULL, NULL,	0,	1,	-1},
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -120,11 +124,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	
-	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-	{ 0,                            XF86XK_AudioMute, spawn, {.v = mutevol } },
-	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
-/* If you have a small laptop keyboard or don't want to spring your fingers too far away. */
+	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
+	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	{ MODKEY,                       XK_F11, spawn, {.v = downvol } },
 	{ MODKEY,                       XK_F9,  spawn, {.v = mutevol } },
 	{ MODKEY,                       XK_F12, spawn, {.v = upvol   } },
@@ -137,9 +139,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button1,        sigdwmblocks,   {.i = 1} },
-	{ ClkStatusText,        0,              Button2,        sigdwmblocks,   {.i = 2} },
-	{ ClkStatusText,        0,              Button3,        sigdwmblocks,   {.i = 3} },
+	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
