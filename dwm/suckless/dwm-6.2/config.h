@@ -56,6 +56,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "vlc",     NULL,       NULL,       0,            1,           -1 },
 	{ "TelegramDesktop", NULL, NULL,	0,	1,	-1},
+	{ "jetbrains-pycharm", NULL, NULL,	0,	1,	-1},
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
