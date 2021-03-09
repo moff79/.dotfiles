@@ -58,6 +58,7 @@ static const Rule rules[] = {
 	{ "TelegramDesktop", NULL, NULL,	0,	1,	-1},
 	{ "jetbrains-pycharm", NULL, NULL,	0,	1,	-1},
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "jetbrains-studio", NULL, NULL,	0,	1,	-1},
 };
 
 /* layout(s) */
