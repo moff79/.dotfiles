@@ -59,6 +59,8 @@ static const Rule rules[] = {
 	{ "jetbrains-pycharm", NULL, NULL,	0,	1,	-1},
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "jetbrains-studio", NULL, NULL,	0,	1,	-1},
+	{ "Genymotion Player", NULL, NULL,	0,	1,	-1},
+	
 };
 
 /* layout(s) */
