@@ -61,6 +61,7 @@ static const Rule rules[] = {
 	{ "jetbrains-studio", NULL, NULL,	0,	1,	-1},
 	{ "Genymotion Player", NULL, NULL,	0,	1,	-1},
 	{ "xdman-Main", NULL, NULL,	0,	1,	-1},
+	{ "Subl", NULL, NULL,	0,	1,	-1},
 };
 
 /* layout(s) */
