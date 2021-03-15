@@ -62,6 +62,7 @@ static const Rule rules[] = {
 	{ "Genymotion Player", NULL, NULL,	0,	1,	-1},
 	{ "xdman-Main", NULL, NULL,	0,	1,	-1},
 	{ "Subl", NULL, NULL,	0,	1,	-1},
+	{ "terminal.exe", NULL, NULL,	0,	1,	-1},
 };
 
 /* layout(s) */
