@@ -64,6 +64,7 @@ static const Rule rules[] = {
 	{ "Subl", NULL, NULL,	0,	1,	-1},
 	{ "terminal.exe", NULL, NULL,	0,	1,	-1},
 	{ "Atom", NULL, NULL,   0,      1,      -1},
+	{ "mpv", NULL, NULL,   0,      1,      -1},
 };
 
 /* layout(s) */
