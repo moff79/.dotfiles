@@ -65,7 +65,8 @@ static const Rule rules[] = {
 	{ "terminal.exe", NULL, NULL,	0,	1,	-1},
 	{ "Atom", NULL, NULL,   0,      1,      -1},
 	{ "mpv", NULL, NULL,   0,      1,      -1},
-};
+	{ "Galculator", NULL, NULL,   0,      1,      -1},
+	};
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
