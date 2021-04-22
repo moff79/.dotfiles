@@ -66,6 +66,7 @@ static const Rule rules[] = {
 	{ "Atom", NULL, NULL,   0,      1,      -1},
 	{ "mpv", NULL, NULL,   0,      1,      -1},
 	{ "Galculator", NULL, NULL,   0,      1,      -1},
+	{ "Atani", NULL, NULL,   0,      1,      -1},
 	};
 
 /* layout(s) */
